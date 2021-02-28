@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int n,lr[10005],i,cl0=0,cr0=0,cl1=0,cr1=0,t,minl=0,minr=0;
+    scanf("%d", &n);
+    for(i=0; i< (2*n); i++)
+        scanf("%d", &lr[i]);
+    for(i=0;i<(2*n); i+=2)
+    {
+        if(lr[i]==0) cl0++;
+        else cl1++;
+    }
+    for(i=1;i<=(2*n); i+=2)
+    {
+        if(lr[i]==0) cr0++;
+        else cr1++;
+    }
+    if(cl0<cl1) minl=cl0;
+    else minl=cl1;
+    if(cr0<cr1) minr=cr0;
+    else minr=cr1;
+    t=minl+minr;
+    printf("%d\n", t);
+    return 0;
+}
