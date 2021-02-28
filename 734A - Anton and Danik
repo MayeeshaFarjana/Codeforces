@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int n, i, cntA = 0, cntD = 0;
+    scanf("%d", &n);
+    char s[n];
+    scanf("%s", s);
+    for(i = 0; i < n; i++)
+    {
+        if(s[i] == 'A') cntA++;
+        if(s[i] == 'D') cntD++;
+    }
+    if(cntA > cntD)
+        printf("Anton\n");
+    else if(cntA == cntD)
+        printf("Friendship\n");
+    else
+        printf("Danik\n");
+
+    return 0;
+}
