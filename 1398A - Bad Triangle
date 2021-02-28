@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+int main()
+{
+    int t,n;
+    long long int a[50005],i;
+    scanf("%t", &t);
+    while(t--)
+    {
+        scanf("%d", &n);
+        for(i=0; i<n-1; i++){
+            scanf("%lld", &a[i]);
+            if(a[i]+a[i+1] < a[i+2]){
+                printf("%lld %lld %lld\n", i,i+1,i+2);
+                break;
+            }
+        }
+        scanf("-1\n");
+    }
+    return 0;
+}
