@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int y,a,b,c,d,m;
+    while(scanf("%d", &y)!=EOF)
+    {
+        while(y>0)
+        {
+            y++;
+            a=y/1000;
+            m=y%1000;
+            b=m/100;
+            c=(m%100)/10;
+            d=(m%100)%10;
+
+            if(a!=b && a!=c && a!=d && b!=c && b!=d && c!=d)
+                break;
+        }
+    printf("%d\n", y);
+    }
+    return 0;
+}
+
+
