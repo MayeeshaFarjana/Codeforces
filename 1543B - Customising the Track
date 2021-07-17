@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n;
+        long long s=0;
+        cin >> n;
+        int a[n];
+        for(int i=0; i<n; i++)
+        {
+            cin >> a[i];
+            s=s+a[i];
+        }
+        long long r = s%n;
+        long long mini = r*(n-r);
+        cout << mini << "\n";
+    }
+    return 0;
+}
