@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        long long int a, b, c, d;
+        cin >> a >> b;
+        c=abs(a-b);
+        if(a==b)
+            cout<<"0 0\n";
+        else
+            cout<<c<<" "<<min(a%c,c-a%c)<<"\n";
+
+    }
+    return 0;
+}
