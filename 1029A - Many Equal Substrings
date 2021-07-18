@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,k;
+    cin >> n >> k;
+    string s;
+    cin >> s;
+
+    int p=0;
+    for(int i=0;i<n;i++){
+    if(s.substr(0,i)==s.substr(n-i,i))
+        p=i;
+    }
+    for(int i=1;i<k;i++)
+        cout << s.substr(0,n-p);
+    cout << s << endl;
+    return 0;
+}
