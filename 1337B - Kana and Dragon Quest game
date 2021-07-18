@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+	int t, x, n, m;
+	scanf("%d", &t);
+	while (t--)
+	{
+		int c = 0;
+		scanf("%d %d %d", &x, &n, &m);
+		while (n > 0 && x > 19)
+		{
+			x = x / 2 + 10;
+			n--;
+			if (x < 1)
+			{
+				printf("YES\n");
+				c = 1;
+				break;
+			}
+		}
+		while (x > 0 && m > 0)
+		{
+			x = x - 10;
+			m--;
+			if (x < 1)
+			{
+				printf("YES\n");
+				c = 1;
+				break;
+			}
+		}
+		if (c == 0)
+			printf("NO\n");
+	}
+	return 0;
+}
