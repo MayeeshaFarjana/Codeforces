@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, d, h[1000];
+    cin >> n >> d;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> h[i];
+    }
+
+    sort(h, h + n);
+
+    int i1 = 0, i2 = 1, w = 0;
+    while (i2 < n)
+    {
+        if (h[i2] - h[i1] <= d)
+        {
+            w += (i2 - i1);
+            ++i2;
+        }
+        else
+        {
+            ++i1;
+        }
+    }
+    w *= 2;
+
+    cout << w << "\n";
+    return 0;
+}
