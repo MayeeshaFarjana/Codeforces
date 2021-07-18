@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include <inttypes.h>
+
+
+int main()
+{
+    int t;
+    int64_t s,i;
+    long long n,r;
+    scanf("%d", &t);
+    while(t--)
+    {
+        s=0;
+        scanf("%lld %lld", &n, &r);
+        if(n<=r)
+        {
+            s=(((n-1)*(n-1+1))/2)+1;
+        }
+        else
+        {
+            s=(r*(r+1))/2;
+        }
+        printf("%" PRId64 "\n", s);
+
+    }
+    return 0;
+}
