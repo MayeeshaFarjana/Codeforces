@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int n, k, l, c, d, p, nl, np, t1, t2, t3, min;
+    scanf("%d %d %d %d %d %d %d %d", &n, &k, &l, &c, &d, &p, &nl, &np);
+    t1=(k*l)/nl;
+    t2=c*d;
+    t3=p/np;
+    if(t1 < t2 && t1 < t3) min=t1;
+	else if(t2 < t3) min=t2;
+	else min=t3;
+	printf("%d\n", min/n);
+    return 0;
+}
