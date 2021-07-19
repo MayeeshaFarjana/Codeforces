@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        cout << "\n";
+        int xa, ya, xb, yb, xf, yf;
+        cin >> xa >> ya >> xb >> yb >> xf >> yf;
+        int ans=abs(xa-xb)+abs(ya-yb);
+        if((xa == xb && xa == xf && min(ya, yb) < yf && yf < max(ya, yb))
+        || (ya == yb && ya == yf && min(xa, xb) < xf && xf < max(xa, xb)))
+            cout << ans+2 << endl;
+        else
+            cout << ans << endl;
+    }
+    return 0;
+}
