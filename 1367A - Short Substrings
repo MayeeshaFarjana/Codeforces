@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int t,j,l;
+    char b[105];
+    scanf("%d", &t);
+    while(t--)
+    {
+        scanf("%s", &b);
+        l=strlen(b);
+        for(j=0;j<l;j+=2)
+            printf("%c", b[j]);
+        printf("%c\n", b[l-1]);
+    }
+    return 0;
+}
