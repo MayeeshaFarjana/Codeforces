@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+{
+    int t,n,count,d1,d2,d3,d4;
+    scanf("%d", &t);
+    while(t--)
+    {
+        scanf("%d", &n);
+        count=0,d1=0,d2=0,d3=0,d4=0;
+        while(n!=0)
+        {
+            if(n>999)
+            {
+                d4 =n/1000;
+                d4=d4*1000;
+                n=n-d4;
+                if(d4!=0)
+                    count++;
+            }
+           else if(n>99)
+            {
+                d3 =n/100;
+                d3=d3*100;
+                n=n-d3;
+                if(d3!=0)
+                    count++;
+            }
+            else if(n>9)
+            {
+                d2 =n/10;
+                d2=d2*10;
+                n=n-d2;
+                if(d2!=0)
+                    count++;
+            }
+            else
+            {
+                d1=n;
+                n=n-d1;
+                if(d1!=0)
+                    count++;
+            }
+        }
+        printf("%d\n", count);
+        if(d4!=0) printf("%d ", d4);
+        if(d3!=0) printf("%d ", d3);
+        if(d2!=0) printf("%d ", d2);
+        if(d1!=0) printf("%d\n", d1);
+    }
+}
