@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int n,p,v,t, cnt=0;
+    scanf("%d", &n);
+    while(n--)
+    {
+        scanf("%d %d %d", &p, &v, &t);
+        if((p==1 && v==1 && t==1) || (p==1 && v==1 && t==0) || (p==1 && v==0 && t==1) || (p==0 && v==1 && t==1))
+            cnt++;
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
