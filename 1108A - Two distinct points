@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int l1,r1,l2,r2,q;
+    cin >> q;
+    while(q--){
+        cin >> l1 >> r1 >> l2 >> r2;
+        if(r1!=l2)
+            cout << r1 << " " << l2 << "\n";
+        else
+            cout << r1-1 << " " << l2 << "\n";
+    }
+    return 0;
+}
