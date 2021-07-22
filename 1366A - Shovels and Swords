@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int s,d,a,b;
+        cin >> s >> d;
+        a=min(s,d);
+        b=min(a,((s+d)/3));
+        cout << b << endl;
+    }
+    return 0;
+}
