@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int k,r,cnt=0, mul=1;
+    cin >> k >> r;
+    bool f=true;
+    while(f)
+    {
+        cnt++;
+        mul=k*cnt;
+        if(mul%10==0||mul%10==r)
+            f=false;
+    }
+    cout << cnt << endl;
+    return 0;
+}
+
